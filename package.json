@@ -3,10 +3,12 @@
   "version": "2025.1117.170000",
   "description": "nicolive protobuf module for TypeScript",
   "main": "dist/index.js",
-  "files": [
-    "dist/index.js",
-    "dist/index.d.ts"
-  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "scripts": {
     "build": "node build.js",
     "prepack": "node build.js",
